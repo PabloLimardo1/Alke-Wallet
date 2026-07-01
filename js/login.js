@@ -19,7 +19,7 @@ $(document).ready(function () {
             }
 
             // 🚀 redirigir al menú (ajusta ruta según ubicación del login.html)
-            window.location.href = "pages/menu.html";
+           window.location.href = "menu.html";
 
         } else {
 
