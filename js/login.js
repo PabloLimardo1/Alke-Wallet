@@ -1,26 +1,34 @@
 $(document).ready(function () {
 
     $("#loginForm").submit(function (e) {
-
         e.preventDefault();
 
-        const email = $("#email").val().trim();
-        const password = $("#password").val().trim();
+        const email = $("#email").val();
+        const password = $("#password").val();
 
+        // 🔐 credenciales de prueba
         if (email === "admin@alke.cl" && password === "1234") {
 
-            localStorage.setItem("usuario", "Administrador");
+            // 🧠 guardar sesión
+            localStorage.setItem("logged", "true");
+            localStorage.setItem("usuario", email);
 
-            window.location.href = "menu.html";
+            // 💰 inicializar saldo si no existe
+            if (!localStorage.getItem("saldo")) {
+                localStorage.setItem("saldo", "10000");
+            }
+
+            // 🚀 redirigir al menú (ajusta ruta según ubicación del login.html)
+            window.location.href = "pages/menu.html";
 
         } else {
 
-            $("#mensaje").html(
-                "<div class='alert alert-danger'>Credenciales incorrectas</div>"
-            );
-
+            $("#mensaje").html(`
+                <div class="alert alert-danger">
+                    Credenciales incorrectas
+                </div>
+            `);
         }
-
     });
 
 });
