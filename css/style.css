@@ -1,0 +1,467 @@
+/* ==========================
+   ALKE WALLET
+   Diseño Moderno 2026
+========================== */
+
+:root{
+
+    --primary:#EA580C;
+    --primary-dark:#C2410C;
+
+    --success:#16A34A;
+
+    --background:#FFF7ED;
+
+    --card:#FFFFFF;
+
+    --text:#292524;
+
+    --gray:#78716C;
+
+}
+
+/* ==========================
+   GENERAL
+========================== */
+
+body{
+
+    background:var(--background);
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    color:var(--text);
+
+}
+
+.container{
+
+    max-width:1150px;
+
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    ) !important;
+
+    padding:16px 0;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.10);
+
+}
+
+.navbar-brand{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    letter-spacing:.5px;
+
+}
+
+/* ==========================
+   TARJETAS
+========================== */
+
+.card{
+
+    border:none;
+
+    border-radius:24px;
+
+    background:var(--card);
+
+    box-shadow:0 10px 35px rgba(0,0,0,.06);
+
+    animation:fade .45s;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(12px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
+
+/* ==========================
+   TARJETA PRINCIPAL
+========================== */
+
+.wallet-card{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-dark)
+    );
+
+    color:white;
+
+}
+
+.wallet-card h1,
+.wallet-card h2,
+.wallet-card h3,
+.wallet-card h4,
+.wallet-card p{
+
+    color:white;
+
+}
+
+.wallet-card hr{
+
+    border-color:rgba(255,255,255,.25);
+
+}
+
+/* ==========================
+   TITULOS
+========================== */
+
+h2,
+h3{
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+.display-4{
+
+    font-weight:800;
+
+    letter-spacing:-2px;
+
+}
+
+/* ==========================
+   BOTONES
+========================== */
+
+.btn{
+
+    border-radius:16px;
+
+    border:none;
+
+    transition:.25s;
+
+    font-weight:bold;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.btn-primary,
+.btn-success,
+.btn-warning{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.btn-primary:hover,
+.btn-success:hover,
+.btn-warning:hover{
+
+    background:var(--primary-dark);
+
+    color:white;
+
+}
+
+.btn-light{
+
+    border-radius:14px;
+
+}
+
+/* ==========================
+   BOTONES MENU
+========================== */
+
+.menu-btn{
+
+    height:150px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    font-size:20px;
+
+}
+
+.menu-btn i{
+
+    font-size:50px;
+
+    margin-bottom:14px;
+
+}
+
+/* ==========================
+   FORMULARIOS
+========================== */
+
+.form-control,
+.form-select{
+
+    border-radius:14px;
+
+    border:2px solid #E5E7EB;
+
+    padding:13px;
+
+    transition:.25s;
+
+}
+
+.form-control:focus,
+.form-select:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 .25rem rgba(234,88,12,.15);
+
+}
+
+/* ==========================
+   TABLAS
+========================== */
+
+.table{
+
+    margin-top:20px;
+
+}
+
+.table thead{
+
+    background:#FFF1E6;
+
+}
+
+.table th{
+
+    color:var(--primary);
+
+    border:none;
+
+}
+
+.table td{
+
+    border-color:#F1F5F9;
+
+}
+
+.table-hover tbody tr:hover{
+
+    background:#FFF7F2;
+
+}
+
+/* ==========================
+   ALERTAS
+========================== */
+
+.alert{
+
+    border:none;
+
+    border-radius:14px;
+
+}
+
+/* ==========================
+   SALDOS
+========================== */
+
+.text-success{
+
+    color:var(--success)!important;
+
+}
+
+/* ==========================
+   ICONOS
+========================== */
+
+.bi{
+
+    vertical-align:middle;
+
+}
+
+/* ==========================
+   LINKS
+========================== */
+
+a{
+
+    text-decoration:none;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    .display-4{
+
+        font-size:2.3rem;
+
+    }
+
+    .menu-btn{
+
+        height:120px;
+
+        font-size:18px;
+
+    }
+
+    .menu-btn i{
+
+        font-size:38px;
+
+    }
+
+    .navbar-brand{
+
+        font-size:20px;
+
+    }
+
+    .card{
+
+        border-radius:20px;
+
+    }
+
+}
+/* ==========================
+   TARJETA DE USUARIO
+========================== */
+
+.user-card{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:rgba(255,255,255,.18);
+
+    padding:12px 18px;
+
+    border-radius:16px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    backdrop-filter:blur(8px);
+
+}
+
+.user-card i{
+
+    font-size:28px;
+
+}
+
+/* ==========================
+   MENU
+========================== */
+
+.menu-btn{
+
+    height:110px;
+
+    border-radius:20px;
+
+    font-size:18px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.menu-btn i{
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+.wallet-card{
+
+    padding:30px !important;
+
+}
+
+.wallet-card h2{
+
+    color:white;
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+.wallet-card small{
+
+    opacity:.8;
+
+    font-size:14px;
+
+}
