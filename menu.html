@@ -13,7 +13,7 @@
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- ✔ ruta correcta (estás en /pages/) -->
+    <!-- ⚠️ IMPORTANTE: si este archivo está en /pages, debe ser ../css -->
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
@@ -127,35 +127,30 @@
 
 </div>
 
-<!-- ✔ scripts base -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
 <script src="../js/data.js"></script>
+
 <script src="../js/menu.js"></script>
 
-<!-- ✔ lógica del menú -->
+<!-- ✅ SCRIPT AÑADIDO (FUNCIONALIDAD SIN CAMBIAR DISEÑO) -->
 <script>
 $(document).ready(function () {
 
-    // 🔐 protección de acceso
+    // 🔐 PROTECCIÓN: si no hay login, vuelve al login
     if (!localStorage.getItem("logged")) {
         window.location.href = "../login.html";
         return;
     }
 
-    // 👤 usuario
+    // 👤 mostrar usuario
     $("#usuario").text(localStorage.getItem("usuario"));
 
-    // 💰 saldo
-    let saldo = localStorage.getItem("saldo");
-
-    if (!saldo) {
-        saldo = 0;
-        localStorage.setItem("saldo", "0");
-    }
-
+    // 💰 mostrar saldo
+    let saldo = localStorage.getItem("saldo") || 0;
     $("#saldo").text(parseInt(saldo).toLocaleString("es-CL"));
 
-    // 🚪 logout
+    // 🚪 cerrar sesión
     $("#cerrarSesion").click(function () {
         localStorage.clear();
         window.location.href = "../login.html";
