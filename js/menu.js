@@ -22,10 +22,9 @@ $(".menu-btn").hide().each(function(i){
 
 });
 
-$("#cerrarSesion").click(function(){
-
-    localStorage.removeItem("usuario");
-
-    window.location.href="login.html";
+$("#cerrarSesion").click(function () {
+    localStorage.removeItem("logged"); // o localStorage.clear()
+    window.location.href = "login.html";
+});
 
 });
