@@ -1,5 +1,5 @@
 if (!localStorage.getItem("logged")) {
-    window.location.href = "../login.html";
+   window.location.href = "login.html";
 }
 
 }
