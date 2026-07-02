@@ -141,7 +141,7 @@ $(document).ready(function () {
 
     // 🔐 PROTECCIÓN: si no hay login, vuelve al login
     if (!localStorage.getItem("logged")) {
-        window.location.href = "../login.html";
+        window.location.href = "login.html";
         return;
     }
 
@@ -155,7 +155,7 @@ $(document).ready(function () {
     // 🚪 cerrar sesión
     $("#cerrarSesion").click(function () {
         localStorage.clear();
-        window.location.href = "../login.html";
+        window.location.href = "login.html";
     });
 
 });
